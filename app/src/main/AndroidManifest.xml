@@ -19,8 +19,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name="com.arash.altafi.bmicalculator.ui.SplashActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

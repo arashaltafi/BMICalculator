@@ -2,27 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScreenBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/ScreenBackground"
     android:orientation="vertical"
-    android:paddingTop="@dimen/_16sdp"
-    android:paddingLeft="@dimen/_6sdp"
-    android:paddingRight="@dimen/_6sdp"
-    android:paddingBottom="@dimen/_6sdp"
+    android:paddingLeft="6dp"
+    android:paddingTop="16dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="6dp"
     tools:context=".ui.DetailsActivity">
 
     <RelativeLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="50dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/back"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:scaleType="centerInside"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
 
@@ -30,31 +30,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="@dimen/_10sdp"
-                    android:src="@drawable/ic_back_arrow"
-                    android:contentDescription="@string/back_button"/>
+                    android:contentDescription="@string/back_button"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back_arrow" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </soup.neumorphism.NeumorphCardView>
 
         <com.google.android.material.textview.MaterialTextView
+            style="@style/TitleTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="@string/bmi_info"
-            style="@style/TitleTextStyle"
-            android:textSize="@dimen/_16ssp"
-            android:layout_centerInParent="true"/>
+            android:textSize="16sp" />
 
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/info"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:scaleType="centerInside"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentEnd="true"
+            android:scaleType="centerInside"
             android:visibility="gone"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
 
@@ -62,12 +62,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="@dimen/_8sdp"
-                    android:src="@drawable/ic_info"
-                    android:contentDescription="@string/back_button"/>
+                    android:contentDescription="@string/back_button"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_info" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -78,22 +78,22 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
         android:layout_above="@+id/shareResult"
+        android:layout_below="@+id/toolbar"
         android:fillViewport="true">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <soup.neumorphism.NeumorphCardView
                 android:id="@+id/bmiView"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp"
                 android:scaleType="centerInside"
-                android:layout_marginTop="@dimen/_12sdp"
                 app:layout_constraintBottom_toBottomOf="@+id/minusHeight"
                 app:layout_constraintEnd_toStartOf="@+id/minusHeight"
                 app:layout_constraintStart_toStartOf="parent"
@@ -105,41 +105,41 @@
                     android:weightSum="2">
 
                     <com.google.android.material.textview.MaterialTextView
+                        style="@style/RegularTextStyle"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Your BMI"
-                        style="@style/RegularTextStyle"
-                        android:paddingEnd="@dimen/_8sdp"
-                        android:includeFontPadding="false"
                         android:gravity="center_vertical|end"
+                        android:includeFontPadding="false"
+                        android:paddingEnd="8dp"
+                        android:text="Your BMI"
                         android:textColor="@color/yourBmiColor"
-                        android:textSize="@dimen/_14ssp"/>
+                        android:textSize="14sp" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/detailBmiValue"
+                        style="@style/RegularTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="24.53"
-                        android:includeFontPadding="false"
-                        android:textSize="@dimen/_30ssp"
                         android:fontFamily="@font/helvetica_neue_light"
-                        style="@style/RegularTextStyle"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="24.53"
                         android:textColor="@color/infoColor"
-                        android:gravity="center_vertical"/>
+                        android:textSize="30sp" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/detailStatus"
+                        style="@style/RegularTextStyle"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Normal"
-                        android:includeFontPadding="false"
-                        style="@style/RegularTextStyle"
-                        android:paddingStart="@dimen/_8sdp"
                         android:gravity="center_vertical|start"
+                        android:includeFontPadding="false"
+                        android:paddingStart="8dp"
+                        android:text="Normal"
                         android:textColor="@color/yourBmiColor"
-                        android:textSize="@dimen/_14ssp"/>
+                        android:textSize="14sp" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -149,8 +149,8 @@
                 android:id="@+id/bmiRangeView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:scaleType="centerInside"
-                android:layout_marginTop="@dimen/_12sdp"
                 app:layout_constraintBottom_toBottomOf="@+id/minusHeight"
                 app:layout_constraintEnd_toStartOf="@+id/minusHeight"
                 app:layout_constraintStart_toStartOf="parent"
@@ -160,7 +160,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="@dimen/_14sdp">
+                    android:padding="14dp">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -168,30 +168,30 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
+                            style="@style/RegularTextStyle2"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
                             android:text="@string/less_than_16"
-                            style="@style/RegularTextStyle2"
-                            android:textColor="@color/yourBmiColor"
-                            android:layout_gravity="start"/>
+                            android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="@string/severely_underweight"
                             style="@style/RegularTextStyle2"
-                            android:gravity="end"/>
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/severely_underweight" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:background="#80BDBDBD"/>
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#80BDBDBD" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -199,30 +199,30 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
+                            style="@style/RegularTextStyle2"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
                             android:text="@string/underweight_range"
-                            style="@style/RegularTextStyle2"
-                            android:textColor="@color/yourBmiColor"
-                            android:layout_gravity="start"/>
+                            android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="@string/underweight"
                             style="@style/RegularTextStyle2"
-                            android:gravity="end"/>
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/underweight" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:background="#80BDBDBD"/>
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#80BDBDBD" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -230,30 +230,30 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
+                            style="@style/RegularTextStyle2"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
                             android:text="@string/normal_range"
-                            style="@style/RegularTextStyle2"
-                            android:textColor="@color/yourBmiColor"
-                            android:layout_gravity="start"/>
+                            android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="@string/normal"
                             style="@style/RegularTextStyle2"
-                            android:gravity="end"/>
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/normal" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:background="#80BDBDBD"/>
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#80BDBDBD" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -261,30 +261,30 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
+                            style="@style/RegularTextStyle2"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
                             android:text="@string/overweight_range"
-                            style="@style/RegularTextStyle2"
-                            android:textColor="@color/yourBmiColor"
-                            android:layout_gravity="start"/>
+                            android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="@string/overweight"
                             style="@style/RegularTextStyle2"
-                            android:gravity="end"/>
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/overweight" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:background="#80BDBDBD"/>
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#80BDBDBD" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -292,30 +292,30 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
+                            style="@style/RegularTextStyle2"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
                             android:text="@string/obese1_range"
-                            style="@style/RegularTextStyle2"
-                            android:textColor="@color/yourBmiColor"
-                            android:layout_gravity="start"/>
+                            android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="@string/obesity_class_i"
                             style="@style/RegularTextStyle2"
-                            android:gravity="end"/>
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/obesity_class_i" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:background="#80BDBDBD"/>
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#80BDBDBD" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -323,30 +323,30 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
+                            style="@style/RegularTextStyle2"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
                             android:text="@string/obese2_range"
-                            style="@style/RegularTextStyle2"
-                            android:textColor="@color/yourBmiColor"
-                            android:layout_gravity="start"/>
+                            android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="@string/obesity_class_ii"
                             style="@style/RegularTextStyle2"
-                            android:gravity="end"/>
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/obesity_class_ii" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_1sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_10sdp"
-                        android:background="#80BDBDBD"/>
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#80BDBDBD" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -354,21 +354,21 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="@string/greater_than_40"
                             style="@style/RegularTextStyle2"
-                            android:textColor="@color/yourBmiColor"
-                            android:layout_gravity="start"/>
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:text="@string/greater_than_40"
+                            android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:text="@string/obesity_class_iii"
                             style="@style/RegularTextStyle2"
-                            android:gravity="end"/>
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/obesity_class_iii" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -380,28 +380,28 @@
     </ScrollView>
 
     <soup.neumorphism.NeumorphCardView
-        android:visibility="gone"
         android:id="@+id/shareResult"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
-        app:neumorph_backgroundColor="@color/colorSecondary"
-        android:layout_alignParentBottom="true">
+        android:visibility="gone"
+        app:neumorph_backgroundColor="@color/colorSecondary">
 
         <com.google.android.material.textview.MaterialTextView
             style="@style/RegularTextStyle"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/share_result"
-            android:textColor="@color/lightColor"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/lightColor" />
 
     </soup.neumorphism.NeumorphCardView>
 

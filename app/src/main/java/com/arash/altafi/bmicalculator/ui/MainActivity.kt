@@ -1,5 +1,6 @@
 package com.arash.altafi.bmicalculator.ui
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
@@ -7,13 +8,16 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.inputmethod.EditorInfo
 import android.widget.SeekBar
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.arash.altafi.bmicalculator.R
-import kotlinx.android.synthetic.main.activity_main.*
+import com.arash.altafi.bmicalculator.databinding.ActivityMainBinding
+import com.arash.altafi.bmicalculator.utils.toast
 
 class MainActivity : AppCompatActivity() {
 
+    private val binding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
     private var gender = "Male"
     private var height = 175
     private var weight = 75
@@ -21,17 +25,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         init()
     }
 
-    private fun init() {
+    private fun init() = binding.apply {
         maleCard.setOnClickListener {
             male.backgroundTintList =
                 ColorStateList.valueOf(
                     ContextCompat.getColor(
-                        this,
+                        this@MainActivity,
                         R.color.colorSecondary
                     )
                 )
@@ -39,31 +43,35 @@ class MainActivity : AppCompatActivity() {
             female.backgroundTintList =
                 ColorStateList.valueOf(
                     ContextCompat.getColor(
-                        this,
+                        this@MainActivity,
                         R.color.colorPrimary
                     )
                 )
 
             maleText.setTextColor(
-                ContextCompat.getColor(this,
-                    R.color.lightColor)
+                ContextCompat.getColor(
+                    this@MainActivity,
+                    R.color.lightColor
+                )
             )
 
             maleIcon.imageTintList = ColorStateList.valueOf(
                 ContextCompat.getColor(
-                    this,
+                    this@MainActivity,
                     R.color.lightColor
                 )
             )
 
             femaleText.setTextColor(
-                ContextCompat.getColor(this,
-                R.color.black)
+                ContextCompat.getColor(
+                    this@MainActivity,
+                    R.color.black
+                )
             )
 
             femaleIcon.imageTintList = ColorStateList.valueOf(
                 ContextCompat.getColor(
-                    this,
+                    this@MainActivity,
                     R.color.black
                 )
             )
@@ -75,31 +83,35 @@ class MainActivity : AppCompatActivity() {
             male.backgroundTintList =
                 ColorStateList.valueOf(
                     ContextCompat.getColor(
-                        this,
+                        this@MainActivity,
                         R.color.colorPrimary
                     )
                 )
 
             maleText.setTextColor(
-                ContextCompat.getColor(this,
-                R.color.black)
+                ContextCompat.getColor(
+                    this@MainActivity,
+                    R.color.black
+                )
             )
 
             maleIcon.imageTintList = ColorStateList.valueOf(
                 ContextCompat.getColor(
-                    this,
+                    this@MainActivity,
                     R.color.black
                 )
             )
 
             femaleText.setTextColor(
-                ContextCompat.getColor(this,
-                R.color.lightColor)
+                ContextCompat.getColor(
+                    this@MainActivity,
+                    R.color.lightColor
+                )
             )
 
             femaleIcon.imageTintList = ColorStateList.valueOf(
                 ContextCompat.getColor(
-                    this,
+                    this@MainActivity,
                     R.color.lightColor
                 )
             )
@@ -107,7 +119,7 @@ class MainActivity : AppCompatActivity() {
             female.backgroundTintList =
                 ColorStateList.valueOf(
                     ContextCompat.getColor(
-                        this,
+                        this@MainActivity,
                         R.color.colorSecondary
                     )
                 )
@@ -184,6 +196,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         seekbar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            @SuppressLint("SetTextI18n")
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 height = progress
                 valueHeight.text = "$progress cm"
@@ -197,18 +210,20 @@ class MainActivity : AppCompatActivity() {
         calculateBmi.setOnClickListener {
             when {
                 TextUtils.isEmpty(valueWeight.text.toString()) -> {
-                    Toast.makeText(this, "Please enter correct Weight", Toast.LENGTH_SHORT).show()
+                    toast("Please enter correct Weight")
                 }
+
                 TextUtils.isEmpty(valueAge.text.toString()) -> {
-                    Toast.makeText(this, "Please enter correct Age", Toast.LENGTH_SHORT).show()
+                    toast("Please enter correct Age")
                 }
+
                 else -> {
                     age = valueAge.text.toString().toInt()
                     weight = valueWeight.text.toString().toInt()
 
                     val bmi = String.format("%.02f", bmiCalc(height.toFloat(), weight.toFloat()))
 
-                    val intent = Intent(this, ResultsActivity::class.java)
+                    val intent = Intent(this@MainActivity, ResultsActivity::class.java)
                     intent.putExtra("BMI_VALUE", bmi)
                     startActivity(intent)
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
@@ -223,4 +238,8 @@ class MainActivity : AppCompatActivity() {
         return weight / (heightInMeter * heightInMeter)
     }
 
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
 }

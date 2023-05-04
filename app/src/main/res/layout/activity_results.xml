@@ -2,73 +2,69 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScreenBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/ScreenBackground"
     android:orientation="vertical"
-    android:paddingTop="@dimen/_16sdp"
-    android:paddingLeft="@dimen/_6sdp"
-    android:paddingRight="@dimen/_6sdp"
-    android:paddingBottom="@dimen/_6sdp"
+    android:paddingLeft="6dp"
+    android:paddingTop="16dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="6dp"
     tools:context=".ui.ResultsActivity">
-
 
     <RelativeLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="50dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/back"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:scaleType="centerInside"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
 
-            <LinearLayout
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="@dimen/_10sdp"
-                    android:src="@drawable/ic_back_arrow"
-                    android:contentDescription="@string/back_button"/>
+                    android:contentDescription="@string/back_button"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back_arrow" />
 
-            </LinearLayout>
-
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </soup.neumorphism.NeumorphCardView>
 
-
-
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TitleTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="@string/bmi_results"
-            style="@style/TitleTextStyle"
-            android:textSize="@dimen/_16ssp"
-            android:layout_centerInParent="true"/>
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@+id/toolbar"
         android:layout_above="@id/showDetails"
-        android:gravity="center">
+        android:layout_below="@+id/toolbar"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/bmiView"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="@dimen/_200sdp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp"
             android:scaleType="centerInside"
-            android:layout_marginBottom="@dimen/_20sdp"
             app:layout_constraintBottom_toBottomOf="@+id/minusHeight"
             app:layout_constraintEnd_toStartOf="@+id/minusHeight"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,67 +77,60 @@
 
                 <ProgressBar
                     android:id="@+id/progress"
-                    android:layout_width="@dimen/_200sdp"
-                    android:layout_height="@dimen/_200sdp"
-                    android:indeterminate="false"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
                     android:layout_centerInParent="true"
-                    android:progressDrawable="@drawable/circular_progress_bar"
                     android:background="@drawable/circle_shape"
-                    style="?android:attr/progressBarStyleHorizontal" />
+                    android:indeterminate="false"
+                    android:progressDrawable="@drawable/circular_progress_bar" />
 
-
-                <TextView
+                <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvBmiValue"
+                    style="@style/RegularTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/temp_bmi"
-                    android:includeFontPadding="false"
                     android:layout_centerInParent="true"
-                    style="@style/RegularTextStyle"
-                    android:textSize="@dimen/_35ssp"/>
+                    android:includeFontPadding="false"
+                    android:text="@string/temp_bmi"
+                    android:textSize="35sp" />
 
             </RelativeLayout>
 
-
         </soup.neumorphism.NeumorphCardView>
 
-
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvBmiStatus"
+            style="@style/RegularTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/temp_bmi_status"
-            style="@style/RegularTextStyle"/>
+            android:text="@string/temp_bmi_status" />
 
 
-
-
-
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <soup.neumorphism.NeumorphCardView
         android:id="@+id/showDetails"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
-        android:layout_marginStart="@dimen/_40sdp"
-        android:layout_marginEnd="@dimen/_40sdp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
-        app:neumorph_backgroundColor="@color/colorSecondary"
-        android:layout_alignParentBottom="true">
+        app:neumorph_backgroundColor="@color/colorSecondary">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             style="@style/RegularTextStyle"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/show_details"
-            android:textColor="@color/lightColor"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/lightColor" />
     </soup.neumorphism.NeumorphCardView>
-
 
 </RelativeLayout>

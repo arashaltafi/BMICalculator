@@ -5,18 +5,18 @@
     style="@style/ScreenBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/_24sdp"
-    android:paddingLeft="@dimen/_6sdp"
-    android:paddingRight="@dimen/_6sdp"
-    android:paddingBottom="@dimen/_6sdp"
+    android:paddingLeft="6dp"
+    android:paddingTop="24dp"
+    android:paddingRight="6dp"
+    android:paddingBottom="6dp"
     tools:context=".ui.MainActivity">
 
     <RelativeLayout
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_8sdp"
-        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -26,24 +26,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="start"
-            android:textSize="@dimen/_16ssp"
-            android:text="@string/bmi_calculator"/>
+            android:text="@string/bmi_calculator"
+            android:textSize="16sp" />
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/light_mode"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_alignParentEnd="true"
-            android:visibility="gone"
-            android:src="@drawable/ic_moon_dark"/>
+            android:src="@drawable/ic_moon_dark"
+            android:visibility="gone" />
 
     </RelativeLayout>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -52,26 +52,26 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/male"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal"
                 android:background="@drawable/card_bg"
-                android:backgroundTint="@color/colorSecondary">
+                android:backgroundTint="@color/colorSecondary"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/maleIcon"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_male_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:contentDescription="@string/male"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_male_1"
                     app:tint="@color/lightColor" />
 
                 <com.google.android.material.textview.MaterialTextView
@@ -79,9 +79,9 @@
                     style="@style/RegularTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:textColor="@color/lightColor"
-                    android:text="@string/male" />
+                    android:layout_marginStart="5dp"
+                    android:text="@string/male"
+                    android:textColor="@color/lightColor" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -92,33 +92,33 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/female"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal"
                 android:background="@drawable/card_bg"
-                android:backgroundTint="@color/colorPrimary">
+                android:backgroundTint="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/femaleIcon"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/ic_female_1"
-                    android:contentDescription="@string/female"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/female"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_female_1" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/femaleText"
                     style="@style/RegularTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginStart="5dp"
                     android:text="@string/female" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -131,9 +131,9 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:weightSum="2"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
         app:layout_constraintBottom_toTopOf="@+id/calculateBmi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,23 +154,23 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline_center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:neumorph_strokeWidth="@dimen/_2sdp">
+            app:neumorph_strokeWidth="2dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:padding="@dimen/_8sdp">
+                android:padding="8dp">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/titleHeight"
                     style="@style/RegularTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginTop="4dp"
                     android:text="@string/height"
                     android:textColor="@color/md_grey_600"
-                    android:textSize="@dimen/_14ssp"
+                    android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -179,14 +179,14 @@
                     android:id="@+id/seekbar"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:max="250"
+                    android:min="1"
                     android:progress="170"
                     android:progressDrawable="@drawable/seekbar_style"
-                    android:thumb="@drawable/custom_thumb"
                     android:splitTrack="false"
-                    android:min="1"
-                    android:max="250"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:thumb="@drawable/custom_thumb"
                     app:layout_constraintBottom_toTopOf="@+id/valueHeight"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -198,9 +198,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_marginBottom="4dp"
                     android:text="@string/temp_height"
-                    android:textSize="@dimen/_15ssp"
+                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -234,22 +234,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
-                    android:padding="@dimen/_8sdp">
+                    android:padding="8dp">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/titleWeight"
                         style="@style/RegularTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/weight"
                         android:textColor="@color/md_grey_600"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/valueWeight"
                         style="@style/RegularTextStyle"
                         android:layout_width="wrap_content"
@@ -262,10 +262,10 @@
                         android:includeFontPadding="false"
                         android:inputType="number"
                         android:maxLength="3"
-                        android:minWidth="@dimen/_20sdp"
+                        android:minWidth="20dp"
                         android:singleLine="true"
                         android:text="@string/temp_weight"
-                        android:textSize="@dimen/_32ssp"
+                        android:textSize="32sp"
                         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -287,16 +287,16 @@
                         android:id="@+id/linearLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="@dimen/_4sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
 
                         <soup.neumorphism.NeumorphCardView
                             android:id="@+id/plusWeight"
-                            android:layout_width="@dimen/_50sdp"
-                            android:layout_height="@dimen/_50sdp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:scaleType="centerInside"
                             app:layout_constraintBottom_toBottomOf="@+id/minusHeight"
                             app:layout_constraintEnd_toStartOf="@+id/minusHeight"
@@ -307,10 +307,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <ImageView
+                                <com.google.android.material.imageview.ShapeableImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:padding="@dimen/_10sdp"
+                                    android:padding="10dp"
                                     android:src="@drawable/ic_plus" />
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -319,8 +319,8 @@
 
                         <soup.neumorphism.NeumorphCardView
                             android:id="@+id/minusWeight"
-                            android:layout_width="@dimen/_50sdp"
-                            android:layout_height="@dimen/_50sdp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:scaleType="centerInside"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -332,10 +332,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <ImageView
+                                <com.google.android.material.imageview.ShapeableImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:padding="@dimen/_10sdp"
+                                    android:padding="10dp"
                                     android:src="@drawable/ic_minus" />
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -360,36 +360,36 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
-                    android:padding="@dimen/_8sdp">
+                    android:padding="8dp">
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/titleAge"
                         style="@style/RegularTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/age"
                         android:textColor="@color/md_grey_600"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <EditText
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/valueAge"
                         style="@style/RegularTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:minWidth="@dimen/_50sdp"
-                        android:gravity="center"
                         android:layout_alignParentBottom="true"
-                        android:text="@string/temp_age"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
                         android:imeOptions="actionDone"
-                        android:singleLine="true"
                         android:inputType="number"
                         android:maxLength="3"
-                        android:textSize="@dimen/_32ssp"
-                        android:background="@android:color/transparent"
+                        android:minWidth="50dp"
+                        android:singleLine="true"
+                        android:text="@string/temp_age"
+                        android:textSize="32sp"
                         app:layout_constraintBottom_toTopOf="@+id/linearLayoutAge"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -399,16 +399,16 @@
                         android:id="@+id/linearLayoutAge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="@dimen/_4sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent">
 
                         <soup.neumorphism.NeumorphCardView
                             android:id="@+id/plusAge"
-                            android:layout_width="@dimen/_50sdp"
-                            android:layout_height="@dimen/_50sdp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:scaleType="centerInside"
                             app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
 
@@ -416,10 +416,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <ImageView
+                                <com.google.android.material.imageview.ShapeableImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:padding="@dimen/_10sdp"
+                                    android:padding="10dp"
                                     android:src="@drawable/ic_plus" />
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -428,8 +428,8 @@
 
                         <soup.neumorphism.NeumorphCardView
                             android:id="@+id/minusAge"
-                            android:layout_width="@dimen/_50sdp"
-                            android:layout_height="@dimen/_50sdp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:scaleType="centerInside"
                             app:neumorph_shapeAppearance="@style/CustomShapeAppearance">
 
@@ -437,10 +437,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <ImageView
+                                <com.google.android.material.imageview.ShapeableImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:padding="@dimen/_10sdp"
+                                    android:padding="10dp"
                                     android:src="@drawable/ic_minus" />
 
                             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -460,23 +460,23 @@
     <soup.neumorphism.NeumorphCardView
         android:id="@+id/calculateBmi"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_60sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
         android:focusable="true"
-        app:neumorph_backgroundColor="@color/colorSecondary"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:neumorph_backgroundColor="@color/colorSecondary">
 
         <com.google.android.material.textview.MaterialTextView
             style="@style/RegularTextStyle"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:textColor="@color/lightColor"
             android:text="@string/let_s_begin"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/lightColor" />
 
     </soup.neumorphism.NeumorphCardView>
 

@@ -29,14 +29,14 @@
     <style name="RegularTextStyle">
 <!--        <item name="fontFamily">@font/cs_book</item>-->
         <item name="fontFamily">@font/googlesansregular</item>
-        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <style name="RegularTextStyle2">
         <!--        <item name="fontFamily">@font/cs_book</item>-->
         <item name="fontFamily">@font/googlesansregular</item>
-        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/infoColor</item>
     </style>
 
@@ -44,20 +44,20 @@
     <style name="BoldTextStyle">
 <!--        <item name="fontFamily">@font/cs_medium</item>-->
         <item name="fontFamily">@font/googlesansregular</item>
-        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
     <style name="TitleTextStyle">
 <!--        <item name="fontFamily">@font/cs_medium</item>-->
         <item name="fontFamily">@font/googlesansbold</item>
-        <item name="android:textSize">@dimen/_20ssp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
 
 
     <style name="Widget.Neumorph.CardView" parent="android:Widget">
-        <item name="android:padding">@dimen/design_default_shadow_padding</item>
+        <item name="android:padding">8dp</item>
         <item name="android:stateListAnimator">@animator/button_state_list_anim_neumorph</item>
         <item name="neumorph_shadowElevation">6dp</item>
         <item name="neumorph_shadowColorLight">#74FFFFFF</item>
@@ -67,7 +67,7 @@
     </style>
 
     <style name="Widget.Neumorph.ImageButton" parent="android:Widget">
-        <item name="android:padding">@dimen/design_default_shadow_padding</item>
+        <item name="android:padding">8dp</item>
         <item name="android:stateListAnimator">@animator/button_state_list_anim_neumorph</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
@@ -93,12 +93,12 @@
 
     <style name="CustomShapeAppearance">
         <item name="neumorph_cornerFamily">rounded</item>
-        <item name="neumorph_cornerSize">@dimen/_30sdp</item>
+        <item name="neumorph_cornerSize">30dp</item>
     </style>
 
     <style name="CustomShapeAppearanceBMIView">
         <item name="neumorph_cornerFamily">rounded</item>
-        <item name="neumorph_cornerSize">@dimen/_125sdp</item>
+        <item name="neumorph_cornerSize">125dp</item>
     </style>
 
 </resources>
