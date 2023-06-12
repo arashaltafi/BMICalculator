@@ -17,10 +17,46 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        debug {
+            keyAlias 'Arash'
+            keyPassword '*******'
+            storeFile rootProject.file("app/ArashAltafiAndroid.jks")
+            storePassword '*******'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            keyAlias 'Arash'
+            keyPassword '*******'
+            storeFile rootProject.file("app/ArashAltafiAndroid.jks")
+            storePassword '*******'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            signingConfig signingConfigs.release
+            debuggable true
+            crunchPngs true
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            multiDexKeepProguard file('multidex-config.pro')
+            ndk { abiFilters "armeabi-v7a", "arm64-v8a" }
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            versionNameSuffix "-debug"
+            applicationIdSuffix ".debug"
+            debuggable true
+            crunchPngs false
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            ndk { abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64" }
         }
     }
 
@@ -63,4 +99,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Pushe
+    implementation 'co.pushe.plus:base:2.6.4'
 }

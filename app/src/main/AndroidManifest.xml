@@ -29,6 +29,9 @@
             </intent-filter>
         </activity>
 
+        <meta-data
+            android:name="pushe_token"
+            android:value="OGVwMWprNDh6MDh6eTI0ZUBpdmlANDE3NzY5NjI5ODQy" />
     </application>
 
 </manifest>
