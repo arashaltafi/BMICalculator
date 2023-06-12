@@ -34,8 +34,11 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_alignParentEnd="true"
-            android:src="@drawable/ic_moon_dark"
-            android:visibility="gone" />
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="@color/textColorPrimary"
+            tools:src="@drawable/ic_moon_dark" />
 
     </RelativeLayout>
 
@@ -72,16 +75,15 @@
                     android:contentDescription="@string/male"
                     android:padding="5dp"
                     android:src="@drawable/ic_male_1"
-                    app:tint="@color/lightColor" />
+                    app:tint="#ffffff" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/maleText"
-                    style="@style/RegularTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:text="@string/male"
-                    android:textColor="@color/lightColor" />
+                    android:textColor="#ffffff" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -115,7 +117,6 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/femaleText"
-                    style="@style/RegularTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
@@ -164,7 +165,6 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/titleHeight"
-                    style="@style/RegularTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -194,7 +194,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/valueHeight"
-                    style="@style/RegularTextStyle"
+                    style="@style/txt.h1.medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -238,7 +238,6 @@
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/titleWeight"
-                        style="@style/RegularTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -251,7 +250,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/valueWeight"
-                        style="@style/RegularTextStyle"
+                        style="@style/txt.h1.bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
@@ -272,12 +271,10 @@
                         app:layout_constraintTop_toBottomOf="@+id/titleWeight" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        style="@style/RegularTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:includeFontPadding="false"
-                        android:text="@string/kg"
                         app:layout_constraintBottom_toBottomOf="@+id/valueWeight"
                         app:layout_constraintStart_toEndOf="@+id/valueWeight"
                         app:layout_constraintTop_toTopOf="@+id/valueWeight"
@@ -364,7 +361,6 @@
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/titleAge"
-                        style="@style/RegularTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -377,7 +373,7 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/valueAge"
-                        style="@style/RegularTextStyle"
+                        style="@style/txt.h1.bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
@@ -468,7 +464,6 @@
         app:neumorph_backgroundColor="@color/colorSecondary">
 
         <com.google.android.material.textview.MaterialTextView
-            style="@style/RegularTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -476,7 +471,7 @@
             android:gravity="center"
             android:text="@string/let_s_begin"
             android:textAllCaps="false"
-            android:textColor="@color/lightColor" />
+            android:textColor="#ffffff" />
 
     </soup.neumorphism.NeumorphCardView>
 

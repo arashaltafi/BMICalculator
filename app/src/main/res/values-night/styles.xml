@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -12,6 +12,11 @@
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+
+        <item name="fontFamily">@font/font_family</item>
+        <item name="android:textAppearance">@style/txt.h1</item>
+        <item name="android:fontFamily">@font/font_family</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="CustomActivityAnimations" parent="@android:style/Animation.Activity">
@@ -98,6 +103,165 @@
     <style name="CustomShapeAppearanceBMIView">
         <item name="neumorph_cornerFamily">rounded</item>
         <item name="neumorph_cornerSize">125dp</item>
+    </style>
+
+    <!--  text-->
+
+    <style name="txt.family" parent="">
+        <item name="android:fontFamily">@font/font_family</item>
+        <item name="fontFamily">@font/font_family</item>
+    </style>
+
+    <style name="txt.family.segoe" parent="">
+        <item name="android:fontFamily">@font/segoe</item>
+        <item name="fontFamily">@font/segoe</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- normal -->
+
+    <style name="txt.h00" parent="txt.family">
+        <item name="android:textSize">11sp</item>
+        <item name="fontWeight">200</item>
+        <item name="android:textFontWeight" tools:targetApi="p">200</item>
+    </style>
+
+    <style name="txt.h0" parent="txt.family">
+        <item name="android:textSize">12sp</item>
+        <item name="fontWeight">200</item>
+        <item name="android:textFontWeight" tools:targetApi="p">200</item>
+    </style>
+
+    <style name="txt.h1" parent="txt.family">
+        <item name="android:textSize">14sp</item>
+        <item name="fontWeight">200</item>
+        <item name="android:textFontWeight" tools:targetApi="p">200</item>
+    </style>
+
+    <style name="txt.h2" parent="txt.family">
+        <item name="android:textSize">16sp</item>
+        <item name="fontWeight">200</item>
+        <item name="android:textFontWeight" tools:targetApi="p">200</item>
+    </style>
+
+    <style name="txt.h3" parent="txt.family">
+        <item name="android:textSize">18sp</item>
+        <item name="fontWeight">200</item>
+        <item name="android:textFontWeight" tools:targetApi="p">200</item>
+    </style>
+
+    <style name="txt.h4" parent="txt.family">
+        <item name="android:textSize">22sp</item>
+        <item name="fontWeight">200</item>
+        <item name="android:textFontWeight" tools:targetApi="p">200</item>
+    </style>
+
+    <!-- light -->
+
+    <style name="txt.h00.light" parent="txt.h00">
+        <item name="android:textFontWeight" tools:targetApi="p">100</item>
+    </style>
+
+    <style name="txt.h0.light" parent="txt.h0">
+        <item name="android:textFontWeight" tools:targetApi="p">100</item>
+    </style>
+
+    <style name="txt.h1.light" parent="txt.h1">
+        <item name="android:textFontWeight" tools:targetApi="p">100</item>
+    </style>
+
+    <style name="txt.h5" parent="txt.family">
+        <item name="android:textSize">24sp</item>
+        <item name="fontWeight">200</item>
+    </style>
+
+    <!-- medium / bold-->
+
+    <style name="txt.h00.medium" parent="txt.h00">
+        <item name="fontWeight">400</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="txt.h0.medium" parent="txt.h0">
+        <item name="fontWeight">400</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="txt.h1.medium" parent="txt.h1">
+        <item name="fontWeight">400</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="txt.h00.bold" parent="txt.h00">
+        <item name="fontWeight">700</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txt.h0.bold" parent="txt.h0">
+        <item name="fontWeight">700</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txt.h1.bold" parent="txt.h1">
+        <item name="fontWeight">700</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txt.h2.medium" parent="txt.h2">
+        <item name="fontWeight">400</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="txt.h2.bold" parent="txt.h2">
+        <item name="fontWeight">700</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txt.h3.medium" parent="txt.h3">
+        <item name="fontWeight">400</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="txt.h3.bold" parent="txt.h3">
+        <item name="fontWeight">700</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txt.h4.medium" parent="txt.h4">
+        <item name="fontWeight">400</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+
+    <style name="txt.h4.bold" parent="txt.h4">
+        <item name="fontWeight">700</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+
+    <style name="txt.h5.medium" parent="txt.h5">
+        <item name="fontWeight">400</item>
+    </style>
+
+    <style name="txt.h5.bold" parent="txt.h5">
+        <item name="fontWeight">700</item>
+    </style>
+
+    <style name="txt.title" parent="txt.h3">
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="txt.desc" parent="txt.h2">
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="txt.pop" parent="txt.h2">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="txt.iran.sans" parent="">
+        <item name="fontWeight">700</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/iran_sans_mobile_bold</item>
+        <item name="fontFamily">@font/iran_sans_mobile_bold</item>
     </style>
 
 </resources>

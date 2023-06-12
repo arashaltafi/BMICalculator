@@ -78,7 +78,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/shareResult"
         android:layout_below="@+id/toolbar"
         android:fillViewport="true">
 
@@ -102,6 +101,8 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:weightSum="2">
 
                     <com.google.android.material.textview.MaterialTextView
@@ -109,16 +110,16 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_vertical|end"
+                        android:gravity="center"
                         android:includeFontPadding="false"
                         android:paddingEnd="8dp"
-                        android:text="Your BMI"
+                        android:text="BMI شما"
                         android:textColor="@color/yourBmiColor"
                         android:textSize="14sp" />
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/detailBmiValue"
-                        style="@style/RegularTextStyle"
+                        style="@style/txt.h1.bold"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/helvetica_neue_light"
@@ -130,14 +131,13 @@
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/detailStatus"
-                        style="@style/RegularTextStyle"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center_vertical|start"
+                        android:gravity="center"
                         android:includeFontPadding="false"
                         android:paddingStart="8dp"
-                        android:text="Normal"
+                        android:text="طبیعی"
                         android:textColor="@color/yourBmiColor"
                         android:textSize="14sp" />
 
@@ -159,29 +159,33 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="14dp">
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="start"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="@string/less_than_16"
                             android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="end"
+                            android:gravity="center"
                             android:text="@string/severely_underweight" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -196,23 +200,25 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="start"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="@string/underweight_range"
                             android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="end"
+                            android:gravity="center"
                             android:text="@string/underweight" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -227,23 +233,25 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="start"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="@string/normal_range"
                             android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="end"
+                            android:gravity="center"
                             android:text="@string/normal" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -258,23 +266,25 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="start"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="@string/overweight_range"
                             android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="end"
+                            android:gravity="center"
                             android:text="@string/overweight" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -289,23 +299,25 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="start"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="@string/obese1_range"
                             android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="end"
+                            android:gravity="center"
                             android:text="@string/obesity_class_i" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -320,23 +332,25 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="start"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="@string/obese2_range"
                             android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="end"
+                            android:gravity="center"
                             android:text="@string/obesity_class_ii" />
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -351,23 +365,25 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="start"
                             android:layout_weight="1"
+                            android:gravity="center"
                             android:text="@string/greater_than_40"
                             android:textColor="@color/yourBmiColor" />
 
                         <com.google.android.material.textview.MaterialTextView
-                            style="@style/RegularTextStyle2"
+                            style="@style/txt.h0.medium"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="end"
+                            android:gravity="center"
                             android:text="@string/obesity_class_iii" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -378,31 +394,5 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </ScrollView>
-
-    <soup.neumorphism.NeumorphCardView
-        android:id="@+id/shareResult"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:visibility="gone"
-        app:neumorph_backgroundColor="@color/colorSecondary">
-
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/RegularTextStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/share_result"
-            android:textAllCaps="false"
-            android:textColor="@color/lightColor" />
-
-    </soup.neumorphism.NeumorphCardView>
 
 </RelativeLayout>

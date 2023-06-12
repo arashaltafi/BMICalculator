@@ -38,7 +38,7 @@ class DetailsActivity : AppCompatActivity() {
                         R.color.severeUnderWeight
                     )
                 )
-                return "Severely Underweight"
+                return "کم وزنی شدید"
             } else if (bmiValue < 18.5) {
                 detailStatus.setTextColor(
                     ContextCompat.getColor(
@@ -46,7 +46,7 @@ class DetailsActivity : AppCompatActivity() {
                         R.color.underWeight
                     )
                 )
-                return "Underweight"
+                return "کمبود وزن"
             } else if (bmiValue < 25) {
                 detailStatus.setTextColor(
                     ContextCompat.getColor(
@@ -54,7 +54,7 @@ class DetailsActivity : AppCompatActivity() {
                         R.color.normalWeight
                     )
                 )
-                return "Normal"
+                return "طبیعی"
             } else if (bmiValue < 30) {
                 detailStatus.setTextColor(
                     ContextCompat.getColor(
@@ -62,7 +62,7 @@ class DetailsActivity : AppCompatActivity() {
                         R.color.overWeight
                     )
                 )
-                return "Overweight"
+                return "اضافه وزن"
             } else if (bmiValue < 35) {
                 detailStatus.setTextColor(
                     ContextCompat.getColor(
@@ -70,7 +70,7 @@ class DetailsActivity : AppCompatActivity() {
                         R.color.obesityClass1
                     )
                 )
-                return "Obesity Class I"
+                return "چاقی کلاس I"
             } else if (bmiValue < 40) {
                 detailStatus.setTextColor(
                     ContextCompat.getColor(
@@ -78,7 +78,7 @@ class DetailsActivity : AppCompatActivity() {
                         R.color.obesityClass2
                     )
                 )
-                return "Obesity Class II"
+                return "چاقی کلاس II"
             } else {
                 detailStatus.setTextColor(
                     ContextCompat.getColor(
@@ -86,7 +86,7 @@ class DetailsActivity : AppCompatActivity() {
                         R.color.obesityClass3
                     )
                 )
-                return "Obesity Class III"
+                return "چاقی کلاس III"
             }
         }
     }

@@ -61,7 +61,7 @@ class ResultsActivity : AppCompatActivity() {
                             R.color.severeUnderWeight
                         )
                     )
-                return "You are Severely Underweight"
+                return "شما به شدت کم وزن هستید"
             } else if (bmiValue < 18.5) {
                 progress.progressTintList =
                     ColorStateList.valueOf(
@@ -70,7 +70,7 @@ class ResultsActivity : AppCompatActivity() {
                             R.color.underWeight
                         )
                     )
-                return "You are Underweight"
+                return "شما کم وزن هستید"
             } else if (bmiValue < 25) {
                 progress.progressTintList =
                     ColorStateList.valueOf(
@@ -79,7 +79,7 @@ class ResultsActivity : AppCompatActivity() {
                             R.color.normalWeight
                         )
                     )
-                return "You have Normal Body Weight"
+                return "شما وزن طبیعی دارید"
             } else if (bmiValue < 30) {
                 progress.progressTintList =
                     ColorStateList.valueOf(
@@ -88,7 +88,7 @@ class ResultsActivity : AppCompatActivity() {
                             R.color.md_amber_600
                         )
                     )
-                return "You are Overweight"
+                return "شما اضافه وزن دارید"
             } else if (bmiValue < 35) {
                 progress.progressTintList =
                     ColorStateList.valueOf(
@@ -97,7 +97,7 @@ class ResultsActivity : AppCompatActivity() {
                             R.color.obesityClass1
                         )
                     )
-                return "You have Obesity Class I"
+                return "شما دارای چاقی کلاس I هستید"
             } else if (bmiValue < 40) {
                 progress.progressTintList =
                     ColorStateList.valueOf(
@@ -106,7 +106,7 @@ class ResultsActivity : AppCompatActivity() {
                             R.color.obesityClass2
                         )
                     )
-                return "You have Obesity Class II"
+                return "شما دارای چاقی کلاس II هستید"
             } else {
                 progress.progressTintList =
                     ColorStateList.valueOf(
@@ -115,7 +115,7 @@ class ResultsActivity : AppCompatActivity() {
                             R.color.obesityClass3
                         )
                     )
-                return "You have Obesity Class III"
+                return "شما دارای چاقی کلاس III هستید"
             }
         }
     }

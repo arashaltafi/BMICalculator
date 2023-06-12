@@ -87,7 +87,6 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tvBmiValue"
-                    style="@style/RegularTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -101,7 +100,6 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvBmiStatus"
-            style="@style/RegularTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/temp_bmi_status" />
@@ -122,7 +120,6 @@
         app:neumorph_backgroundColor="@color/colorSecondary">
 
         <com.google.android.material.textview.MaterialTextView
-            style="@style/RegularTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -130,7 +127,7 @@
             android:gravity="center"
             android:text="@string/show_details"
             android:textAllCaps="false"
-            android:textColor="@color/lightColor" />
+            android:textColor="#ffffff" />
     </soup.neumorphism.NeumorphCardView>
 
 </RelativeLayout>

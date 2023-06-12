@@ -8,9 +8,11 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.inputmethod.EditorInfo
 import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import com.arash.altafi.bmicalculator.R
 import com.arash.altafi.bmicalculator.databinding.ActivityMainBinding
+import com.arash.altafi.bmicalculator.utils.isNightModeEnabled
 import com.arash.altafi.bmicalculator.utils.toast
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +33,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() = binding.apply {
+        if (isNightModeEnabled()) {
+            lightMode.setImageResource(R.drawable.ic_light)
+        } else {
+            lightMode.setImageResource(R.drawable.ic_moon_dark)
+        }
+
+        lightMode.setOnClickListener {
+            if (isNightModeEnabled()) {
+                AppCompatDelegate.setDefaultNightMode(
+                    AppCompatDelegate.MODE_NIGHT_NO
+                )
+                lightMode.setImageResource(R.drawable.ic_light)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(
+                    AppCompatDelegate.MODE_NIGHT_YES
+                )
+                lightMode.setImageResource(R.drawable.ic_moon_dark)
+            }
+        }
+
         maleCard.setOnClickListener {
             male.backgroundTintList =
                 ColorStateList.valueOf(
@@ -199,7 +221,7 @@ class MainActivity : AppCompatActivity() {
             @SuppressLint("SetTextI18n")
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 height = progress
-                valueHeight.text = "$progress cm"
+                valueHeight.text = "$progress"
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
