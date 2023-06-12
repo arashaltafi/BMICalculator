@@ -243,7 +243,7 @@ class MainActivity : AppCompatActivity() {
                     age = valueAge.text.toString().toInt()
                     weight = valueWeight.text.toString().toInt()
 
-                    val bmi = String.format("%.02f", bmiCalc(height.toFloat(), weight.toFloat()))
+                    val bmi = bmiCalc(height.toFloat(), weight.toFloat()).toString()
 
                     val intent = Intent(this@MainActivity, ResultsActivity::class.java)
                     intent.putExtra("BMI_VALUE", bmi)

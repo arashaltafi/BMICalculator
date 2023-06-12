@@ -21,7 +21,8 @@ class DetailsActivity : AppCompatActivity() {
 
     private fun init() = binding.apply {
         val bmi = intent.getFloatExtra("BMI_VALUE", 24.53F)
-        detailBmiValue.text = bmi.toString()
+        detailBmiValue.text = String.format("%.02f", bmi)
+
         detailStatus.text = interpretBMI(bmi)
 
         back.setOnClickListener {

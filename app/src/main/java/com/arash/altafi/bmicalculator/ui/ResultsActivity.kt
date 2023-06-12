@@ -40,7 +40,7 @@ class ResultsActivity : AppCompatActivity() {
             progress.progress = bmiValue.toInt()
         }
 
-        tvBmiValue.text = bmiValue.toString()
+        tvBmiValue.text = String.format("%.02f", bmiValue)
         tvBmiStatus.text = interpretBMI(bmiValue)
 
         showDetails.setOnClickListener {
